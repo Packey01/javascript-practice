@@ -6,7 +6,7 @@
 // Alert the larger number
 let accountType = prompt('what are your first number?');
 console.log (parseInt(accountType));
-let accountType1 = prompt('what are your first number?');
+let accountType1 = prompt('what are your second number?');
 console.log (parseInt(accountType1));
 
 if (accountType === (accountType > accountType1))
