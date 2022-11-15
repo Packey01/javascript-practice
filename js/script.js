@@ -9,7 +9,14 @@ console.log (parseInt(accountType));
 let accountType1 = prompt('what are your second number?');
 console.log (parseInt(accountType1));
 
+if (isNaN(accountType)) {
+    alert ("not a number, enter a number")
+  }
+  if (isNaN(accountType1)) {
+   alert ("not a number, enter a number")
+  }
 if (accountType === (accountType > accountType1))
 alert ('greater than');
 else (accountType === (accountType < accountType1))
 alert ('lesser than');
+
