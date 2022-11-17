@@ -1,22 +1,22 @@
-// ------------ DAILY CHALLENGE ------------
-// Prompt the user for two different numbers
-// Convert the values to integers
-// Store the two integers as variables
-// Compare the two numbers
-// Alert the larger number
-let accountType = prompt('what are your first number?');
-console.log (parseInt(accountType));
-let accountType1 = prompt('what are your second number?');
-console.log (parseInt(accountType1));
+const SERVER_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
-if (isNaN(accountType)) {
-    alert ("not a number, enter a number")
-  }
-  if (isNaN(accountType1)) {
-   alert ("not a number, enter a number")
-  }
-if (accountType === (accountType > accountType1))
-alert ('greater than');
-else (accountType === (accountType < accountType1))
-alert ('lesser than');
 
+function getDrink(Drink) {
+  return fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita' + Drink)
+  .then(function(response) {
+      return response.json();
+  })
+  .catch(function(error) {
+      console.log('error', error);
+  });
+}
+
+function displayDrinkName(data) {
+  const name = document.createElement('h1');
+  name.innerText = data.name;
+  document.body.appendChild(name);
+  return data;
+}
+
+getDrink('margarita')
+.then(displayDrinkName);
